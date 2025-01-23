@@ -1,0 +1,1 @@
+We predict approximately 7242/10204 people in the test dataset may experience a stroke.

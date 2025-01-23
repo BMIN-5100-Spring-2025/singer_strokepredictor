@@ -11,3 +11,6 @@ venv/
 
 # MacOS
 .DS_Store
+
+#Junk from code
+.joblib
