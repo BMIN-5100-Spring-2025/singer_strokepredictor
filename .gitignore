@@ -13,4 +13,4 @@ venv/
 .DS_Store
 
 #Junk from code
-.joblib
+*.joblib

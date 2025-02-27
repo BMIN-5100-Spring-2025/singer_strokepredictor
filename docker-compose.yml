@@ -1,6 +1,6 @@
 services:
-  my_python_app:
-    image: my_python_app
+  strokepredictor:
+    image: strokepredictor
     build:
       context: .
       dockerfile: Dockerfile
