@@ -21,11 +21,10 @@ def timer(start_time=None):
         print(" Time taken: %i minutes and %s seconds." % (tmin, round(tsec, 2)))
 
 
-if __name__ == "__main__":
-    base_directory = os.path.dirname(os.path.dirname(__file__))
 
-    input_directory = os.getenv('INPUT_DIR', os.path.join(base_directory, 'data/input/'))
-    output_directory = os.getenv('OUTPUT_DIR', os.path.join(base_directory, 'data/output/'))
+base_directory = os.path.dirname(os.path.dirname(__file__))
+input_directory = os.getenv('INPUT_DIR', os.path.join(base_directory, 'data/input/'))
+output_directory = os.getenv('OUTPUT_DIR', os.path.join(base_directory, 'data/output/'))
 
 
 DATA_TRAIN_PATH = os.path.join(input_directory, "train.csv")
