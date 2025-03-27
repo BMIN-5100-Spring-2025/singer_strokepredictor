@@ -1,7 +1,3 @@
-data "aws_caller_identity" "current" {}
-
-data "aws_region" "current_region" {}
-
 resource "aws_s3_bucket" "singer-strokepredictor" {
   bucket = "singer-strokepredictor"
 
