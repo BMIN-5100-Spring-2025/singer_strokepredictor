@@ -14,3 +14,7 @@ venv/
 
 #Junk from code
 *.joblib
+
+#terraform
+**/.terraform/*
+.terraform.lock.hcl
