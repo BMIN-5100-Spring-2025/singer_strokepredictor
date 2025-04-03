@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "singer_task" {
   container_definitions = jsonencode([
     {
       name      = "singer-container"
-      image     = "061051226319.dkr.ecr.us-east-1.amazonaws.com/singer_strokepredictor:latest"
+      image     = "${aws_ecr_repository.singer_strokepredictor.repository_url}:latest"
       cpu       = 1024
       memory    = 2048
       essential = true
@@ -29,7 +29,7 @@ resource "aws_ecs_task_definition" "singer_task" {
       environment = [
         {
           name  = "S3_BUCKET_NAME"
-          value = "singer-strokepredictor"
+          value = aws_s3_bucket.singer-strokepredictor.id
         },
         {
           name  = "RUN_ENV"
