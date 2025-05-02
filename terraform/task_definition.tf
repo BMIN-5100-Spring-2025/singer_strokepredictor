@@ -2,8 +2,8 @@ resource "aws_ecs_task_definition" "singer_task" {
   family                   = "singer-strokepredictor"
   requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
-  cpu                      = "1024"         # 1 vCPU
-  memory                   = "2048"         # 2 GB
+  cpu                      = "1024"         
+  memory                   = "2048"         
   execution_role_arn       = aws_iam_role.ecs_execution_role.arn
   task_role_arn            = aws_iam_role.ecs_task_role.arn
 
@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "singer_task" {
   container_definitions = jsonencode([
     {
       name      = "singer-container"
-      image     = "${aws_ecr_repository.singer_strokepredictor.repository_url}:latest"
+      image     = "${aws_ecr_repository.singer_strokepredictor.repository_url}:9"
       cpu       = 1024
       memory    = 2048
       essential = true
