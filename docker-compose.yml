@@ -1,6 +1,7 @@
 services:
   strokepredictor:
-    image: strokepredictor
+    image: singer_strokepredictor
+    platform: linux/amd64
     build:
       context: .
       dockerfile: Dockerfile
